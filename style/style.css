@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: #eee;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-shadow: 0 0 6px #333;
+}
+a:hover {
+    color: #fff;
+}
+body {
+    background-image: radial-gradient(#ccc, #333);
+}
+header {
+    margin: 36px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    margin: 0 100px;
+}
+img.active {
+    animation: playing 3s linear infinite;
+}
+section {
+    background-color: #fff;
+    border: 1px solid #666;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px #00000060;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 60px;
+}
+textarea {
+    background: transparent;
+    flex: auto;
+    padding: 24px;
+    min-height: 280px;
+    border: none;
+    font-size: 24px;
+    line-height: 32px;
+    outline: none;
+    resize: none;
+}
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background: transparent;
+    margin: 10px;
+}
+button:hover {
+    background: #eee;
+    cursor: pointer;
+}
+button:hover .icon path {
+    fill: #515151;
+}
+footer {
+    margin: 60px auto;
+    text-align: center;
+}
+#pinlish {
+    border-left: 1px solid #ccc;
+}
+#listen .icon.volume {
+    display: initial;
+}
+#listen.active .icon.volume {
+    display: none;
+}
+#listen .icon.stop {
+    width: 16px;
+    height: 16px;
+    display: none;
+}
+#listen.active .icon.stop {
+    display: initial;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+}
+.icon path {
+    fill: #8a8a8a;
+}
+.icon.active path {
+    fill: #333;
+}
+@keyframes playing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+section.story, section.contact {
+    padding: 30px;
+    font-size: 21px;
+    line-height: 36px;
+}
+section.story h3, section.contact h3 {
+    margin: 30px 10px 30px;
+}
+section.story p, section.contact p {
+    padding: 10px;
+}
+section.story .author {
+    text-align: right;
+    width: 100%;
+    margin: 30px 20px;
+}
+section.story .author p {
+    padding: 0;
+}
+section.contact p {
+    width: 100%;
+}
