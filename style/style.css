@@ -67,6 +67,10 @@ footer {
     margin: 60px auto;
     text-align: center;
 }
+.wrap-l, .wrap-r {
+    display: flex;
+    flex: auto;
+}
 #pinlish {
     border-left: 1px solid #ccc;
 }
@@ -94,14 +98,6 @@ footer {
 .icon.active path {
     fill: #333;
 }
-@keyframes playing {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 section.story, section.contact {
     padding: 30px;
     font-size: 21px;
@@ -123,4 +119,44 @@ section.story .author p {
 }
 section.contact p {
     width: 100%;
+}
+@keyframes playing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width: 500px){
+    img {
+        margin: 0 20px;
+        width: 32px;
+        height: 32px;
+    }
+    header {
+        margin: 20px;
+    }
+    section {
+        margin: 0 20px;
+    }
+    button {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 24px;
+    }
+    footer {
+        margin: 30px auto;
+    }
+    textarea {
+        min-height: 200px;
+        font-size: 1rem;
+    }
+    textarea#english {
+        border-bottom: 1px solid #ccc;
+    }
+    textarea#pinlish {
+        border-left: none;
+    }
 }
