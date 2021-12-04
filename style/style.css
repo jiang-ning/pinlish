@@ -67,6 +67,9 @@ footer {
     margin: 60px auto;
     text-align: center;
 }
+footer p {
+    margin: 10px 0;
+}
 .wrap-l, .wrap-r {
     display: flex;
     flex: auto;
