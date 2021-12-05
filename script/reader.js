@@ -14,7 +14,7 @@ audio.addEventListener('ended', () => {
         play(trackList[trackIndex++]);
     } else {
         listen.setAttribute('class', '');
-        document.querySelector('img').setAttribute('class', '');
+        // document.querySelector('img').setAttribute('class', ''); // rolling logo
         trackIndex = 1;
     }
 });
@@ -29,10 +29,10 @@ const reader = function() {
         listen.setAttribute('class', '');
         audio.pause();
         trackIndex = 1;
-        document.querySelector('img').setAttribute('class', '');
+        // document.querySelector('img').setAttribute('class', ''); // rolling logo
     } else {
         if(trackList && trackList.length > 0) {
-            document.querySelector('img').setAttribute('class', 'active');
+            // document.querySelector('img').setAttribute('class', 'active'); // rolling logo
             listen.setAttribute('class', 'active');
             play(trackList[0]);
         } else {

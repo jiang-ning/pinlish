@@ -3,16 +3,12 @@
     margin: 0;
 }
 a {
-    color: #eee;
-    font-size: 1.2rem;
+    color: #999;
     text-decoration: none;
-    text-shadow: 0 0 6px #333;
 }
 a:hover {
-    color: #fff;
-}
-body {
-    background-image: radial-gradient(#ccc, #333);
+    color: #666;
+    text-decoration: underline;
 }
 header {
     margin: 36px 60px;
@@ -21,6 +17,10 @@ header {
     align-content: center;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
+}
+body {
+    background-color: #eee;
 }
 img {
     margin: 0 100px;
@@ -30,9 +30,8 @@ img.active {
 }
 section {
     background-color: #fff;
-    border: 1px solid #666;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px #00000060;
+    box-shadow: 0 3px 6px #cccccc60;
+    border-radius: 6px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 60px;
@@ -67,7 +66,11 @@ footer {
     margin: 60px auto;
     text-align: center;
 }
+footer a {
+    margin: 0 10px;
+}
 footer p {
+    color: #999;
     margin: 10px 0;
 }
 .wrap-l, .wrap-r {
@@ -75,7 +78,7 @@ footer p {
     flex: auto;
 }
 #pinlish {
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #eee;
 }
 #listen .icon.volume {
     display: initial;
@@ -103,8 +106,6 @@ footer p {
 }
 section.story, section.contact {
     padding: 30px;
-    font-size: 21px;
-    line-height: 36px;
 }
 section.story h3, section.contact h3 {
     margin: 30px 10px 30px;
@@ -123,20 +124,7 @@ section.story .author p {
 section.contact p {
     width: 100%;
 }
-@keyframes playing {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 @media (max-width: 500px){
-    img {
-        margin: 0 20px;
-        width: 32px;
-        height: 32px;
-    }
     header {
         margin: 20px;
     }
@@ -161,5 +149,20 @@ section.contact p {
     }
     textarea#pinlish {
         border-left: none;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+    }
+    section {
+        background-color: #666;
+        box-shadow: 0 3px 6px #00000060;
+    }
+    #pinlish {
+        border-left: 1px solid #333;
+    }
+    button:hover {
+        background: #999;
     }
 }
