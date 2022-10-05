@@ -3,7 +3,7 @@
  * The speaker read translated text referring to the provided track list from the writer
  * @author Jiang Ning
  */
-import {trackList} from '/script/writer.js';
+import {trackList} from './writer.js';
 
 let trackIndex = 1;
 const audio = new Audio();
@@ -20,7 +20,7 @@ audio.addEventListener('ended', () => {
 });
 
 const play = function(pronounce) {
-    audio.src = '/vocal/' + pronounce + '.mp3';
+    audio.src = '../vocal/' + pronounce + '.mp3';
     audio.play();
 }
 

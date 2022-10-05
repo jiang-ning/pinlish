@@ -3,7 +3,7 @@
  * Testing ONLY, for catching any missing soundtrack files
  * @author Jiang Ning
  */
- import dict from '/script/dict.js';
+ import dict from './dict.js';
 
  const tester = function () {
 
@@ -19,7 +19,7 @@
 
         grp.forEach((val)=>{
 
-            let fileURL = '/vocal/' + val + '.mp3';
+            let fileURL = '../vocal/' + val + '.mp3';
             fetch(fileURL).then(response => {
                 if(response.ok) {
                     vocalExist ++;

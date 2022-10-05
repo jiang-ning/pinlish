@@ -3,8 +3,8 @@
  * Translate user input latin referring the dictionary, and show results in the translation text area
  * @author Jiang Ning
  */
-import dict from '/script/dict.js';
-import resizer from '/script/resizer.js';
+import dict from './dict.js';
+import resizer from './resizer.js';
 // import tester from '/script/tester.js';
 
 let trackList = [];
