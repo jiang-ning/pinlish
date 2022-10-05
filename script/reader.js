@@ -20,7 +20,7 @@ audio.addEventListener('ended', () => {
 });
 
 const play = function(pronounce) {
-    audio.src = '../vocal/' + pronounce + '.mp3';
+    audio.src = './vocal/' + pronounce + '.mp3';
     audio.play();
 }
 
