@@ -20,7 +20,7 @@ header {
     font-size: 1.2rem;
 }
 body {
-    background-color: #eee;
+    background-color: #ddd;
 }
 img {
     margin: 0 100px;
@@ -31,13 +31,13 @@ img.active {
 section {
     background-color: #fff;
     box-shadow: 0 3px 6px #cccccc60;
-    border-radius: 6px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 60px;
 }
 textarea {
     background: transparent;
+    color: #666;
     flex: auto;
     padding: 24px;
     min-height: 280px;
@@ -77,8 +77,8 @@ footer p {
     display: flex;
     flex: auto;
 }
-#pinlish {
-    border-left: 1px solid #eee;
+.wrap-r {
+    background: #eee;
 }
 #listen .icon.volume {
     display: initial;
@@ -124,7 +124,12 @@ section.story .author p {
 section.contact p {
     width: 100%;
 }
-@media (max-width: 500px){
+@media screen and (max-width: 950px){
+    textarea {
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 500px){
     header {
         margin: 20px;
     }
@@ -144,12 +149,6 @@ section.contact p {
         min-height: 200px;
         font-size: 1rem;
     }
-    textarea#english {
-        border-bottom: 1px solid #ccc;
-    }
-    textarea#pinlish {
-        border-left: none;
-    }
 }
 @media (prefers-color-scheme: dark) {
     body {
@@ -159,10 +158,13 @@ section.contact p {
         background-color: #666;
         box-shadow: 0 3px 6px #00000060;
     }
-    #pinlish {
-        border-left: 1px solid #333;
+    textarea {
+        color: #333;
     }
     button:hover {
         background: #999;
+    }
+    .wrap-r {
+        background: #555;
     }
 }
