@@ -3,43 +3,45 @@
  * The speaker read translated text referring to the provided track list from the writer
  * @author Jiang Ning
  */
-import {trackList} from './writer.js';
 
-let trackIndex = 1;
-const audio = new Audio();
-const listen = document.querySelector('#listen');
+const synth = window.speechSynthesis;
 
-audio.addEventListener('ended', () => {
-    if(trackIndex < trackList.length) {
-        play(trackList[trackIndex++]);
-    } else {
-        listen.setAttribute('class', '');
-        // document.querySelector('img').setAttribute('class', ''); // rolling logo
-        trackIndex = 1;
-    }
-});
+const pinlish = document.querySelector("#pinlish");
+const listen = document.querySelector("#listen");
 
-const play = function(pronounce) {
-    audio.src = '/pinlish/vocal/' + pronounce + '.mp3';
-    audio.play();
-}
 
 const reader = function() {
+
     if(listen.getAttribute('class') == 'active') {
         listen.setAttribute('class', '');
-        audio.pause();
-        trackIndex = 1;
-        // document.querySelector('img').setAttribute('class', ''); // rolling logo
     } else {
-        if(trackList && trackList.length > 0) {
-            // document.querySelector('img').setAttribute('class', 'active'); // rolling logo
-            listen.setAttribute('class', 'active');
-            play(trackList[0]);
-        } else {
-            // console.log('no track');
-        }
+        listen.setAttribute('class', 'active');
     }
     
+    if (synth.speaking) {
+        console.error("speechSynthesis.speaking");
+        return;
+        
+    }
+
+    if (pinlish.value !== "") {
+        synth.cancel();
+        const utterThis = new SpeechSynthesisUtterance(pinlish.value);
+
+        listen.setAttribute('class', 'active');
+        
+        utterThis.onend = function (event) {
+            listen.setAttribute('class', '');
+            console.log("SpeechSynthesisUtterance.onend");
+        };
+
+        utterThis.onerror = function (event) {
+            console.error("SpeechSynthesisUtterance.onerror");
+        };
+
+        utterThis.voice = synth.getVoices()[0];
+        synth.speak(utterThis);
+    }
 }
 
 export {reader};
