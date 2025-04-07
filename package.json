@@ -1,0 +1,26 @@
+{
+  "name": "pinlish",
+  "version": "1.0.0",
+  "description": "Pinlish project",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "parcel build index.html --dist-dir dist --no-source-maps",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "events": "^3.3.0",
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "nodemon": "^2.0.0",
+    "parcel": "^2.10.0",
+    "prettier": "^2.0.0",
+    "svgo": "^3.3.2"
+  },
+  "author": "Jiang Ning",
+  "license": "GPL"
+}

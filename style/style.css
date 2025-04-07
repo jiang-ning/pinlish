@@ -1,170 +1,174 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 a {
-    color: #999;
-    text-decoration: none;
+  color: #999;
+  text-decoration: none;
 }
 a:hover {
-    color: #666;
-    text-decoration: underline;
+  color: #666;
+  text-decoration: underline;
 }
 header {
-    margin: 36px 60px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
+  margin: 36px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
 }
 body {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 img {
-    margin: 0 100px;
+  margin: 0 100px;
 }
 img.active {
-    animation: playing 3s linear infinite;
+  animation: playing 3s linear infinite;
 }
 section {
-    background-color: #fff;
-    box-shadow: 0 3px 6px #cccccc60;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 60px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px #cccccc60;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 60px;
 }
 textarea {
-    background: transparent;
-    color: #666;
-    flex: auto;
-    padding: 24px;
-    min-height: 280px;
-    border: none;
-    font-size: 24px;
-    line-height: 32px;
-    outline: none;
-    resize: none;
+  background: transparent;
+  color: #666;
+  flex: auto;
+  padding: 24px;
+  min-height: 280px;
+  border: none;
+  font-size: 24px;
+  line-height: 32px;
+  outline: none;
+  resize: none;
 }
 button {
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    border: none;
-    background: transparent;
-    margin: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  margin: 10px;
 }
 button:hover {
-    background: #eee;
-    cursor: pointer;
+  background: #eee;
+  cursor: pointer;
 }
 button:hover .icon path {
-    fill: #515151;
+  fill: #515151;
 }
 footer {
-    margin: 60px auto;
-    text-align: center;
+  margin: 60px auto;
+  text-align: center;
 }
 footer a {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 footer p {
-    color: #999;
-    margin: 10px 0;
+  color: #999;
+  margin: 10px 0;
 }
-.wrap-l, .wrap-r {
-    display: flex;
-    flex: auto;
+.wrap-l,
+.wrap-r {
+  display: flex;
+  flex: auto;
 }
 .wrap-r {
-    background: #eee;
+  background: #eee;
 }
 #listen .icon.volume {
-    display: initial;
+  display: initial;
 }
 #listen.active .icon.volume {
-    display: none;
+  display: none;
 }
 #listen .icon.stop {
-    width: 16px;
-    height: 16px;
-    display: none;
+  width: 16px;
+  height: 16px;
+  display: none;
 }
 #listen.active .icon.stop {
-    display: initial;
+  display: initial;
 }
 .icon {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 .icon path {
-    fill: #8a8a8a;
+  fill: #8a8a8a;
 }
 .icon.active path {
-    fill: #333;
+  fill: #333;
 }
-section.story, section.contact {
-    padding: 30px;
+section.story,
+section.contact {
+  padding: 30px;
 }
-section.story h3, section.contact h3 {
-    margin: 30px 10px 30px;
+section.story h3,
+section.contact h3 {
+  margin: 30px 10px 30px;
 }
-section.story p, section.contact p {
-    padding: 10px;
+section.story p,
+section.contact p {
+  padding: 10px;
 }
 section.story .author {
-    text-align: right;
-    width: 100%;
-    margin: 30px 20px;
+  text-align: right;
+  width: 100%;
+  margin: 30px 20px;
 }
 section.story .author p {
-    padding: 0;
+  padding: 0;
 }
 section.contact p {
-    width: 100%;
+  width: 100%;
 }
-@media screen and (max-width: 950px){
-    textarea {
-        padding-right: 0;
-    }
+@media screen and (max-width: 950px) {
+  textarea {
+    padding-right: 0;
+  }
 }
-@media screen and (max-width: 500px){
-    header {
-        margin: 20px;
-    }
-    section {
-        margin: 0 20px;
-    }
-    button {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        right: 24px;
-    }
-    footer {
-        margin: 30px auto;
-    }
-    textarea {
-        min-height: 200px;
-        font-size: 1rem;
-    }
+@media screen and (max-width: 500px) {
+  header {
+    margin: 20px;
+  }
+  section {
+    margin: 0 20px;
+  }
+  button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 24px;
+  }
+  footer {
+    margin: 30px auto;
+  }
+  textarea {
+    min-height: 200px;
+    font-size: 1rem;
+  }
 }
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #333;
-    }
-    section {
-        background-color: #666;
-        box-shadow: 0 3px 6px #00000060;
-    }
-    textarea {
-        color: #333;
-    }
-    button:hover {
-        background: #999;
-    }
-    .wrap-r {
-        background: #555;
-    }
+  body {
+    background-color: #333;
+  }
+  section {
+    background-color: #666;
+    box-shadow: 0 3px 6px #00000060;
+  }
+  textarea {
+    color: #333;
+  }
+  button:hover {
+    background: #999;
+  }
+  .wrap-r {
+    background: #555;
+  }
 }
