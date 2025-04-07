@@ -10,6 +10,9 @@ require('dotenv').config()
 // Serve static files from the root directory
 app.use(express.static(path.join(__dirname)));
 
+const faviconPath = path.join(__dirname, 'favicon.ico');
+app.use('/favicon.ico', express.static(faviconPath));
+
 // Handle the root route to send the index.html file
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
